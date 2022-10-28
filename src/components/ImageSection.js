@@ -12,7 +12,7 @@ function ImageSection({product}) {
   return (
     <div className="product__imageDiv">
       <img
-        src="http://sl-in-brand-media.s3-website.ap-south-1.amazonaws.com/product/8901030673214_22810_S1-8901030673214.jpg"
+        src="https://imgcdn.shortlyst.com/?u=https://static.shortlyst.com/assets/campaigns/bigbasket_64.png"
         alt="productImage"
       />
       {/* <div className="product__imageDiv_images">
