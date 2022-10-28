@@ -1,0 +1,22 @@
+.PriceComparison__card {
+  border-radius: 5px;
+  /* background: #f9fafb; */
+  box-shadow: 9.91px 9.91px 15px #e3e4e4, -9.91px -9.91px 15px #ffffff;
+  height: 150px;
+  padding:20px 50px 50px 20px;
+  border: 1px solid #eff2f2;
+  color: #191919;
+}
+.PriceComparison__card img{
+  width: 22%;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.PriceComparison__card div{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-size: 1.5rem; */
+  justify-content: flex-start;
+}
