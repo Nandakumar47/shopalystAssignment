@@ -4,13 +4,16 @@ import "./ProductPage.css";
 import parse from "html-react-parser";
 import PriceComparison from "../components/PriceComparison";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
+import ReactPlayer from "react-player";
 const baseUrl =
   "https://api-in-dev.shortlyst.com/shopalyst-service/v1/products/types/EAN?codes=8901030673214";
 function ProductPage() {
   const [product, setProduct] = useState([]);
   const [imageSrc, setImageSrc] = useState("");
+  function isImage(url) {
+    return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
+  }
   function imageChanger(e) {
     return setImageSrc(e.target.getAttribute("src"));
   }
@@ -64,7 +67,15 @@ function ProductPage() {
             <div className="product__imageDiv_images">
               {product[0].images.length !== 0 &&
                 product[0].images.map((item) => {
-                  return <img src={item} alt="productImages" onClick={imageChanger} />;
+                  return (
+                    isImage(item) && (
+                      <img
+                        src={item}
+                        alt="productImages"
+                        onClick={imageChanger}
+                      />
+                    )
+                  );
                 })}
             </div>
           </div>
@@ -91,7 +102,7 @@ function ProductPage() {
               <button>Add to cart</button>
               <p>
                 Click <span>Add to cart</span> or <span>Buy now</span> to avail
-                this offer from{" "}
+                this offer from
                 <span>{findLowest(product[0].skuSet).attributes.merchant}</span>
               </p>
             </div>
@@ -122,5 +133,5 @@ function ProductPage() {
     </>
   );
 }
-AOS.init();
+
 export default ProductPage;

@@ -1,6 +1,7 @@
 import React from "react";
 import "./PriceComparison.css";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function PriceComparison({ merchant, offerPrice, salePrice, link }) {
   // console.log(merchant,offerPrice,salePrice)
   return (
@@ -8,11 +9,11 @@ function PriceComparison({ merchant, offerPrice, salePrice, link }) {
       <img src={link} alt="" />
       <div>
         <h3>{merchant.toUpperCase()}</h3>
+        <p><span>Offer Price :</span>{offerPrice}</p>
         <p>Sale Price :{salePrice}</p>
-        <p>Offer Price :{offerPrice}</p>
       </div>
     </div>
   );
 }
-
+AOS.init();
 export default PriceComparison;
