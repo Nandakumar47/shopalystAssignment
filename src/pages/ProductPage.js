@@ -63,7 +63,7 @@ function ProductPage() {
       {product.length !== 0 && (
         <div className="product">
           <div className="product__imageDiv">
-            <img src={imageSrc || product[0].images[0]} alt="productImage" />
+            <img src={product[0].images[0]} alt="productImage" />
             <div className="product__imageDiv_images">
               {product[0].images.length !== 0 &&
                 product[0].images.map((item) => {
