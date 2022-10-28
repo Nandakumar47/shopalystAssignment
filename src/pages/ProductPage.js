@@ -60,11 +60,11 @@ function ProductPage() {
       {product.length !== 0 && (
         <div className="product">
           <div className="product__imageDiv">
-            <img src={imageSrc || product[0].images[0]} alt="" />
+            <img src={imageSrc || product[0].images[0]} alt="productImage" />
             <div className="product__imageDiv_images">
               {product[0].images.length !== 0 &&
                 product[0].images.map((item) => {
-                  return <img src={item} alt="" onClick={imageChanger} />;
+                  return <img src={item} alt="productImages" onClick={imageChanger} />;
                 })}
             </div>
           </div>
@@ -107,7 +107,6 @@ function ProductPage() {
                 product[0].skuSet.map((item) => {
                   return (
                     <PriceComparison
-                      
                       key={item.skuId}
                       merchant={item.attributes.merchant}
                       offerPrice={item.offerPrice}
