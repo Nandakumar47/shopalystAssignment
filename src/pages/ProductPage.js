@@ -4,19 +4,12 @@ import "./ProductPage.css";
 import parse from "html-react-parser";
 import PriceComparison from "../components/PriceComparison";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-
-import ReactPlayer from "react-player";
+import ImageSection from "../components/ImageSection";
 const baseUrl =
   "https://api-in-dev.shortlyst.com/shopalyst-service/v1/products/types/EAN?codes=8901030673214";
 function ProductPage() {
   const [product, setProduct] = useState([]);
-  const [imageSrc, setImageSrc] = useState("");
-  function isImage(url) {
-    return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
-  }
-  function imageChanger(e) {
-    return setImageSrc(e.target.getAttribute("src"));
-  }
+
   function percentageCalc(curr, total) {
     return 100 - (curr / total) * 100;
   }
@@ -62,23 +55,7 @@ function ProductPage() {
     <>
       {product.length !== 0 && (
         <div className="product">
-          <div className="product__imageDiv">
-            <img src="http://sl-in-brand-media.s3-website.ap-south-1.amazonaws.com/product/8901030673214_22810_S1-8901030673214.jpg" alt="productImage" />
-            <div className="product__imageDiv_images">
-              {product[0].images.length !== 0 &&
-                product[0].images.map((item) => {
-                  return (
-                    isImage(item) && (
-                      <img
-                        src={item}
-                        alt="productImages"
-                        onClick={imageChanger}
-                      />
-                    )
-                  );
-                })}
-            </div>
-          </div>
+          <ImageSection product={product} />
           <div className="product__details">
             <div className="category_details">
               <p>Category</p>
