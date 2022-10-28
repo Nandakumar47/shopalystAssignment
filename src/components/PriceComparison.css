@@ -3,9 +3,10 @@
   /* background: #f9fafb; */
   box-shadow: 9.91px 9.91px 15px #e3e4e4, -9.91px -9.91px 15px #ffffff;
   height: 150px;
-  padding:20px 50px 50px 20px;
-  /* border: 2px solid #ffc502; */
+  padding:30px 50px 50px 30px;
+  border: 1px solid #eff2f2;
   color: #191919;
+  position: relative;
 }
 .PriceComparison__card img{
   width: 22%;
@@ -13,13 +14,15 @@
   margin-right: 10px;
   border-radius: 5px;
 }
-.PriceComparison__card div{
+.PriceComparison__card>div{
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* font-size: 1.5rem; */
   justify-content: flex-start;
+  position: absolute;
+  bottom: 60px;
 }
 .PriceComparison__card span{
   color: #e0144c;

@@ -5,6 +5,7 @@ import parse from "html-react-parser";
 import PriceComparison from "../components/PriceComparison";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import ImageSection from "../components/ImageSection";
+// import NavBar from "../components/NavBar";
 const baseUrl =
   "https://api-in-dev.shortlyst.com/shopalyst-service/v1/products/types/EAN?codes=8901030673214";
 function ProductPage() {
@@ -53,6 +54,7 @@ function ProductPage() {
   }, []);
   return (
     <>
+    {/* <NavBar/> */}
       {product.length !== 0 && (
         <div className="product">
           <ImageSection product={product} />
@@ -79,7 +81,7 @@ function ProductPage() {
               <button>Add to cart</button>
               <p>
                 Click <span>Add to cart</span> or <span>Buy now</span> to avail
-                this offer from
+                this offer from{" "}
                 <span>{findLowest(product[0].skuSet).attributes.merchant}</span>
               </p>
             </div>
@@ -89,7 +91,7 @@ function ProductPage() {
             </div>
           </div>
           <div className="priceComparison">
-            <h4>Price Comparison</h4>
+            <h3>Price Comparison</h3>
             <div>
               {product[0].skuSet.length !== 0 &&
                 product[0].skuSet.map((item) => {

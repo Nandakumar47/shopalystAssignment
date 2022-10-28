@@ -1,0 +1,22 @@
+ul,li{
+  list-style: none;
+}
+.navBarMainDiv{
+  display: flex;
+  background-color: #e0144c;
+  color: #fff;
+  padding: 12px 50px;
+  align-items: center;
+  justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navLinks{
+  display:flex;
+  width: 500px;
+  justify-content: flex-end;
+}
+.navLinks>li{
+  margin-right: 20px;
+}
