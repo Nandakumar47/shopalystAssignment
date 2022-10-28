@@ -26,8 +26,8 @@
   
   overflow: scroll;
 }
-.product__imageDiv_images::-webkit-scrollbar{
-    display: none;}
+/* .product__imageDiv_images::-webkit-scrollbar{
+    display: none;} */
 .product__imageDiv_images > img {
   margin-right: 2px;
   opacity: 0.7;
