@@ -63,7 +63,7 @@ function ProductPage() {
       {product.length !== 0 && (
         <div className="product">
           <div className="product__imageDiv">
-            <img src={product[0].images[0]} alt="productImage" />
+            <img src="http://sl-in-brand-media.s3-website.ap-south-1.amazonaws.com/product/8901030673214_22810_S1-8901030673214.jpg" alt="productImage" />
             <div className="product__imageDiv_images">
               {product[0].images.length !== 0 &&
                 product[0].images.map((item) => {
