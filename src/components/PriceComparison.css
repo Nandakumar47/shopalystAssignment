@@ -3,27 +3,53 @@
   /* background: #f9fafb; */
   box-shadow: 9.91px 9.91px 15px #e3e4e4, -9.91px -9.91px 15px #ffffff;
   height: 150px;
-  padding:30px 50px 50px 30px;
+  padding: 30px 50px 50px 30px;
   border: 1px solid #eff2f2;
   color: #191919;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
-.PriceComparison__card img{
-  width: 22%;
+.PriceComparison__card img {
+  width: 15%;
   object-fit: contain;
   margin-right: 10px;
   border-radius: 5px;
+  position: absolute;
+  top:20px;
+  left: 20px;
 }
-.PriceComparison__card>div{
+.PriceComparison__card > div {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* font-size: 1.5rem; */
-  justify-content: flex-start;
-  position: absolute;
-  bottom: 60px;
+  justify-content: flex-end;
+  /* position: absolute;
+  bottom: 60px; */
 }
-.PriceComparison__card span{
+.PriceComparison__card span {
   color: #e0144c;
+}
+@media only screen and (max-width: 600px) {
+  .PriceComparison__card {
+    padding: 5px 10px 5px 10px;
+    /* max-width:300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .PriceComparison__card img {
+    width: 9%;
+    object-fit: contain;
+    margin-right: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top:20px;
+    left: 20px;
+  }
+  .PriceComparison__card > div {
+    /* bottom: 30px; */
+    font-size: 0.9rem;
+  }
 }
