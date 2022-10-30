@@ -5,8 +5,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 function ImageSection({ product }) {
   const scrollRef = useRef();
   const [imageSrc, setImageSrc] = useState(product[0].images[0]);
-  function scroll(scrollOffset) {
-    scrollRef.current.scrollLeft += scrollOffset;
+  function scroll(scrollDist) {
+    scrollRef.current.scrollLeft += scrollDist;
   }
   function isImage(url) {
     return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);

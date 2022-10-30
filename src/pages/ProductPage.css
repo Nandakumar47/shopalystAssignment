@@ -91,14 +91,15 @@ h3 {
 }
 .product__details_Set2 > button:nth-child(2):hover {
   background-color: #ffc502;
-  padding: 8px 18px;
+
   cursor: pointer;
 }
 .product__details_Set2 > button:first-child:hover {
   background-color: #ffffff;
   border: 2px solid #ffc502;
-  cursor: pointer;
   padding: 8px 18px;
+  cursor: pointer;
+ 
 }
 .product__details_Set2 > p {
   color: #5a5757ca;
@@ -164,7 +165,67 @@ h3 {
   }
   .product__details {
     margin: auto;
-    padding: 0 15px;
+    font-size: 0.8rem;
+    padding: 0 10%;
+  }
+  .product__details_description > p {
+    font-size: 0.7rem;
+  }
+  .product__details_Set1 {
+    font-size: 0.8rem;
+  }
+  .category_details{
+    font-size: 0.65rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width:601px){
+  .product {
+    /* width: 300; */
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    row-gap: 15px;
+    padding: 0 10px;
+    align-items: center;
+  }
+  .priceComparison {
+    grid-column: 1/3;
+    padding: 0 5%;
+  }
+  .product__details_Set2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+  .product__details_Set2 > button {
+    padding: 12px 20px;
+    margin-right: 0;
+    width: 45%;
+    font-size: 0.8rem;
+  }
+  .product__details_Set2 > button:nth-child(2) {
+    padding: 11px 18px;
+  }
+  .priceComparison > div {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+  }
+  .product__details_Set2 > p {
+    font-size: 0.6rem;
+  }
+  .product__details_Set2 span {
+    font-weight: 700;
+    font-size: 0.7rem;
+  }
+  .product__details {
+   
+    font-size: 0.8rem;
+    padding: 0 10%;
   }
   .product__details_description > p {
     font-size: 0.7rem;
