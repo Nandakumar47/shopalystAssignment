@@ -7,7 +7,7 @@ function PriceComparison({ merchant, offerPrice, salePrice, link }) {
     <div className="PriceComparison__card" data-aos="fade-up">
       <img src={link} alt="logo" />
       <div>
-        <h3>{merchant.toUpperCase()}</h3>
+        <h3>{merchant}</h3>
         <p>
           <span>Offer Price :</span>
           {offerPrice}

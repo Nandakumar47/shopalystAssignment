@@ -21,9 +21,9 @@ function ProductPage() {
   }
   function findLowest(listOfPrice) {
     return listOfPrice.reduce(
-      (curr, acc) => {
-        if (curr.offerPrice < acc.offerPrice) {
-          acc = { ...curr };
+      (acc, current) => {
+        if (current.offerPrice < acc.offerPrice) {
+          acc = { ...current };
         }
         return { ...acc };
       },

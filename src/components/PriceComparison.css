@@ -31,6 +31,9 @@
 .PriceComparison__card span {
   color: #e0144c;
 }
+.PriceComparison__card h3::first-letter{
+  text-transform: capitalize;
+}
 @media only screen and (max-width: 600px) {
   .PriceComparison__card {
     padding: 5px 10px 5px 10px;
